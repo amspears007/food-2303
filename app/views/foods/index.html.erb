@@ -5,6 +5,10 @@
 <ul>
 <li>Ingredients <%= food[:ingredients] %></li>
 <li>BrandOwner <%= food[:brandOwner] %></li>
+  
+  <%# require 'pry'; binding.pry %>
+<li>GTIN/UPC: <%= @food_id[:gtinUpc] %></li>
+
 </ul>
 <% end %>
 <ol>

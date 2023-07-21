@@ -11,6 +11,8 @@ save_and_open_page
       expect(page).to have_content("SWEET POTATOES")
       expect(page).to have_content("NOT A BRANDED ITEM")
       expect(page).to have_content("ORGANIC SWEET POTATOES.")
-      expect(page).to have_content("Search Results for 'sweet potatoes'")
+      expect(page).to have_content("Found 10 search results for sweet potatoes")
+      expect(page).to have_content("GTIN/UPC:")
+
   end
 end
