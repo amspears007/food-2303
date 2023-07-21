@@ -1,0 +1,10 @@
+<h3> Found <%= @food_info.count %>  search results for <%= @food %></h3>
+<ol>
+<% @food_info.each do |food| %>
+<li>Description<%= food[:description] %></li>
+<ul>
+<li>Ingredients <%= food[:ingredients] %></li>
+<li>BrandOwner <%= food[:brandOwner] %></li>
+</ul>
+<% end %>
+<ol>
