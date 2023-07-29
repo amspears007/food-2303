@@ -1,6 +1,6 @@
-<h3> Found <%= @foods.count %>  search results for <%= @food %></h3>
+<h3> Found <%= @facade.find_food.count %>  search results for <%= @food %></h3>
 <ol>
-<% @foods.each do |food| %>
+<% @facade.find_food.each do |food| %>
 <li>GTIN/UPC: <%= food.gtinupc %></li>
 <ul>
 <li>Description <%= food.description %></li>
