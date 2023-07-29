@@ -13,7 +13,10 @@ class FoodsController < ApplicationController
 
 
     response = conn.get("fdc/v1/foods/search?query=#{@food}&pageSize=10&pageNumber=1")
-    @food_info = JSON.parse(response.body, symbolize_names: true)[:foods]
+    @food_info = JSON.parse(response.body, symbolize_names: true)
+    @foods = @food_info[:foods].map do |food_data|
+      Food.new(food_data)
+    end
 
 
     # @food_info.each do |food|

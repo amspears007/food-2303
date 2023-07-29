@@ -1,11 +1,11 @@
-<h3> Found <%= @food_info.count %>  search results for <%= @food %></h3>
+<h3> Found <%= @foods.count %>  search results for <%= @food %></h3>
 <ol>
-<% @food_info.each do |food| %>
-<li>GTIN/UPC: <%= food[:gtinUpc] %></li>
+<% @foods.each do |food| %>
+<li>GTIN/UPC: <%= food.gtinupc %></li>
 <ul>
-<li>Description <%= food[:description] %></li>
-<li>Ingredients <%= food[:ingredients] %></li>
-<li>BrandOwner <%= food[:brandOwner] %></li><br>
+<li>Description <%= food.description %></li>
+<li>Ingredients <%= food.ingredients %></li>
+<li>BrandOwner <%= food.brandowner %></li><br>
   
 
 </ul>
