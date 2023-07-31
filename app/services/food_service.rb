@@ -1,4 +1,7 @@
 class FoodService
+  # def initialize(food)
+  #   @food = food
+  # end
 
   def self.food_by_name(food)    
     get_url("fdc/v1/foods/search?query=#{food}")
@@ -15,7 +18,9 @@ class FoodService
 
       faraday.params["api_key"] = ENV["api_key"]
       faraday.params["pageSize"] = 10 
+      # farada.params["query"] = @food
       #passing in params of 10 per page instead of the default of 50
+      #can pass in query params if instantiated?
     end
   end
 end
